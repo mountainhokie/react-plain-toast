@@ -1,0 +1,213 @@
+/*
+Four Types
+Success
+Danger
+Info
+Warning
+---- Add Custom
+
+Four Positions
+Top-right
+Bottom-right
+Top-left
+Bottom-left
+---- Add Bottom-center
+---- Add Top-center
+*/
+
+/* ---------- General Layout ------------- */
+
+.notification-container {
+  font-size: 14px;
+  box-sizing: border-box;
+  position: fixed;
+}
+
+/* ---------- Positioning ------------- */
+.top-right {
+  top: 12px;
+  right: 12px;
+  transition: transform 0.6s ease-in-out;
+  animation: toast-in-right 0.7s;
+}
+
+.bottom-right {
+  bottom: 12px;
+  right: 12px;
+  transition: transform 0.6s ease-in-out;
+  animation: toast-in-right 0.7s;
+}
+
+.top-left {
+  top: 12px;
+  left: 12px;
+  transition: transform 0.6s ease-in;
+  animation: toast-in-left 0.7s;
+}
+
+.bottom-left {
+  bottom: 12px;
+  left: 12px;
+  transition: transform 0.6s ease-in;
+  animation: toast-in-left 0.7s;
+}
+
+/* ---------- Styling ------------- */
+
+.notification {
+  background: #fff;
+  transition: 0.3s ease;
+  position: relative;
+  pointer-events: auto;
+  overflow: hidden;
+  margin: 0 0 6px;
+  padding: 30px;
+  margin-bottom: 15px;
+  width: 300px;
+  max-height: 100px;
+  border-radius: 3px 3px 3px 3px;
+  box-shadow: 0 0 10px #999;
+  color: #000;
+  opacity: 0.9;
+  background-position: 15px;
+  background-repeat: no-repeat;
+}
+
+.notification:hover {
+  box-shadow: 0 0 12px #fff;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.notification-title {
+  font-weight: 700;
+  font-size: 16px;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 6px;
+  width: 300px;
+  height: 18px;
+}
+
+.notification-message {
+  margin: 0;
+  text-align: left;
+  height: 18px;
+  margin-left: -1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.notification-image {
+  float: left;
+  margin-right: 15px;
+}
+
+.notification-image img {
+  width: 30px;
+  height: 30px;
+}
+
+.toast {
+  height: 50px;
+  width: 365px;
+  color: #fff;
+  padding: 20px 15px 10px 10px;
+}
+
+.notification-container button {
+  position: relative;
+  right: -0.3em;
+  top: -0.3em;
+  float: right;
+  font-weight: 700;
+  color: #fff;
+  outline: none;
+  border: none;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.9;
+  line-height: 1;
+  font-size: 16px;
+  padding: 0;
+  cursor: pointer;
+  background: 0 0;
+  border: 0;
+}
+
+/* ---------- Notification Types ------- */
+.success {
+  background-color: #5cb85c;
+}
+
+.danger {
+  background-color: #d9534f;
+}
+
+.info {
+  background-color: #5bc0de;
+}
+
+.warning {
+  background-color: #f0ad4e;
+}
+
+/* ---------- Icons ------------------ */
+.icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+.success .icon {
+  background-image: url("data:image/svg+xml,%0A%3Csvg width='32' height='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Ctitle%3Ebackground%3C/title%3E%3Crect fill='none' id='canvas_background' height='402' width='582' y='-1' x='-1'/%3E%3C/g%3E%3Cg%3E%3Ctitle%3ELayer 1%3C/title%3E%3Cpath id='svg_1' fill='%23ffffff' d='m16,0c-8.836,0 -16,7.164 -16,16s7.164,16 16,16s16,-7.164 16,-16s-7.164,-16 -16,-16zm-2.48,23.383l-7.362,-7.363l2.828,-2.828l4.533,4.535l9.617,-9.617l2.828,2.828l-12.444,12.445z'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.danger .icon {
+  background-image: url("data:image/svg+xml,%0A%3Csvg width='32' height='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Ctitle%3Ebackground%3C/title%3E%3Crect fill='none' id='canvas_background' height='402' width='582' y='-1' x='-1'/%3E%3C/g%3E%3Cg%3E%3Ctitle%3ELayer 1%3C/title%3E%3Ccircle fill='%23ffffff' r='16' id='BG' cy='16' cx='16'/%3E%3Cpath fill='%23d72828' id='Exclamatory_x5F_Sign' d='m14.5,25l3,0l0,-3l-3,0l0,3zm0,-19l0,13l3,0l0,-13l-3,0z'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.info .icon {
+  background-image: url("data:image/svg+xml,%0A%3Csvg width='85' height='85' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Ctitle%3Ebackground%3C/title%3E%3Crect fill='none' id='canvas_background' height='402' width='582' y='-1' x='-1'/%3E%3C/g%3E%3Cg%3E%3Ctitle%3ELayer 1%3C/title%3E%3Cpath fill='%23ffffff' id='svg_1' d='m42.5,0.003c-23.472,0 -42.5,19.028 -42.5,42.5s19.028,42.5 42.5,42.5s42.5,-19.027 42.5,-42.5s-19.028,-42.5 -42.5,-42.5zm-0.212,66.267c0,0 -1.972,1.311 -3.32,1.305c-0.12,0.055 -0.191,0.087 -0.191,0.087l0.003,-0.087c-0.283,-0.013 -0.568,-0.053 -0.855,-0.125l-0.426,-0.105c-2.354,-0.584 -3.6,-2.918 -3.014,-5.271l3.277,-13.211l1.479,-5.967c1.376,-5.54 -4.363,1.178 -5.54,-1.374c-0.777,-1.687 4.464,-5.227 8.293,-7.896c0,0 1.97,-1.309 3.319,-1.304c0.121,-0.056 0.192,-0.087 0.192,-0.087l-0.005,0.087c0.285,0.013 0.57,0.053 0.857,0.124l0.426,0.106c2.354,0.584 3.788,2.965 3.204,5.318l-3.276,13.212l-1.482,5.967c-1.374,5.54 4.27,-1.204 5.446,1.351c0.777,1.685 -4.559,5.201 -8.387,7.87zm8.306,-41.294c-0.818,3.295 -4.152,5.304 -7.446,4.486c-3.296,-0.818 -5.305,-4.151 -4.487,-7.447c0.818,-3.296 4.152,-5.304 7.446,-4.486c3.296,0.817 5.304,4.151 4.487,7.447z'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.warning .icon {
+  background-image: url("data:image/svg+xml,%3Csvg width='1792' height='1792' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Ctitle%3Ebackground%3C/title%3E%3Crect fill='none' id='canvas_background' height='402' width='582' y='-1' x='-1'/%3E%3C/g%3E%3Cg%3E%3Ctitle%3ELayer 1%3C/title%3E%3Cpath fill='%23ffffff' id='svg_1' d='m1024,1375l0,-190q0,-14 -9.5,-23.5t-22.5,-9.5l-192,0q-13,0 -22.5,9.5t-9.5,23.5l0,190q0,14 9.5,23.5t22.5,9.5l192,0q13,0 22.5,-9.5t9.5,-23.5zm-2,-374l18,-459q0,-12 -10,-19q-13,-11 -24,-11l-220,0q-11,0 -24,11q-10,7 -10,21l17,457q0,10 10,16.5t24,6.5l185,0q14,0 23.5,-6.5t10.5,-16.5zm-14,-934l768,1408q35,63 -2,126q-17,29 -46.5,46t-63.5,17l-1536,0q-34,0 -63.5,-17t-46.5,-46q-37,-63 -2,-126l768,-1408q17,-31 47,-49t65,-18t65,18t47,49z'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* ---------- Animations ------------- */
+
+@keyframes toast-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes toast-in-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* ------- Toaster ----------------- */
+
+.toaster {
+  position: fixed;
+}

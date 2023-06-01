@@ -1,0 +1,30 @@
+{
+  "name": "react-plain-toast",
+  "version": "1.0.0",
+  "description": "Plain, lightweight React Toast",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "ReadMe.md"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "transpile": "rimraf lib && babel src -d lib --copy-files",
+    "prepublishOnly": "npm run transpile",
+    "watch": "babel src -d lib --copy-files --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": ">=17.0.2",
+    "react-dom": ">=17.0.2",
+    "prop-types": ">=15.7.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.21.5",
+    "@babel/core": "^7.22.1",
+    "@babel/preset-env": "^7.22.4",
+    "@babel/preset-react": "^7.22.3",
+    "rimraf": "^5.0.1"
+  }
+}
