@@ -4,7 +4,7 @@
 
 In the project directory, you can run:
 
-### `npm install react-plain-toast`
+#### `npm install react-plain-toast`
 
 ## Usage
 
