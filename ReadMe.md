@@ -59,15 +59,21 @@ These props are put directly on the Toaster component. They are are all optional
 #### position
 
 Type: `string`
+
 Default: `bottom-right`
+
 Acceptable Values: `bottom-left, bottom-right, top-left, top-right`
+
 Sets the position of all Toasts.
 
 #### autoDeleteTime
 
 Type: `number`
+
 Default: `0`
+
 Acceptable Values: Any number above 0. Set in milliseconds. Ex for 3 seconds: `3000`
+
 When set to a number above 0 the Toast will automatically delete itself.
 
 ### Example
@@ -85,24 +91,31 @@ These options are set in the toast function.
 #### type
 
 Required
+
 Type: `string`
+
 Acceptable Values: `success, warning, info, danger`
 
 #### title
 
 Required
+
 Type: `string`
+
 Acceptable Values: Any string. Ex: `Toast Title`
 
 #### description
 
 Required
+
 Type: `string`
+
 Acceptable Values: Any string. Ex: `Toast description.`
 
 #### backgroundColor
 
 Type: `string`
+
 Acceptable Values: Any hex code Ex: `#ff0000`
 
 ### Example
