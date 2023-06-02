@@ -2,18 +2,22 @@
   "name": "react-plain-toast",
   "version": "1.0.0",
   "description": "Plain, lightweight React Toast",
+  "author": "mountainhokie",
   "main": "lib/index.js",
   "files": [
     "lib",
     "ReadMe.md"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mountainhokie/react-plain-toast.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "transpile": "rimraf lib && babel src -d lib --copy-files",
     "prepublishOnly": "npm run transpile",
     "watch": "babel src -d lib --copy-files --watch"
   },
-  "author": "",
   "license": "ISC",
   "peerDependencies": {
     "react": ">=17.0.2",
