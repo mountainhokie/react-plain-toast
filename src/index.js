@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 import "./styles/Toast.css";
 
 const Toaster = (props) => {
-  console.log("console test react-toast-test");
-
   const { position, autoDeleteTime } = props;
   const [toasts, setToasts] = useState([]);
 
